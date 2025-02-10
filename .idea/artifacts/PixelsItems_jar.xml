@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="PixelsItems:jar">
+    <output-path>$USER_HOME$/Desktop/1.21 plugins</output-path>
+    <root id="archive" name="PixelsItems.jar">
+      <element id="module-output" name="PixelsItems" />
+    </root>
+  </artifact>
+</component>

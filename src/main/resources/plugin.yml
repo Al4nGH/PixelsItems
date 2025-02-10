@@ -1,0 +1,4 @@
+name: PixelsItems
+version: '${project.version}'
+main: me.alanelol.pixelsitems.PixelsItems
+api-version: '1.21'
