@@ -63,7 +63,7 @@ public class ItemTest implements CustomItem {
         // CUSTOM ACTIONS
         Target.addPotionEffect(new PotionEffect(PotionEffectType.SLOWNESS, 100, 2, true, true));
         Target.sendMessage("Ⓢ Has sido inflingido con SLOWNESS.");
-        Player.sendMessage("Ⓢ Has inflingido a " + Target.getName() + " con SLOWNESS.");
+        Player.sendMessage("Ⓢ Has inflingido a " + Target.getName() + " con SLOWNESS por 2s");
         TestEffect.DoEffect(Target, Plugin);
     }
 
