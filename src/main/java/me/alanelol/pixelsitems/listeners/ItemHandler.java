@@ -1,4 +1,4 @@
-package me.alanelol.pixelsitems.Listeners;
+package me.alanelol.pixelsitems.listeners;
 
 import me.alanelol.pixelsitems.PixelsItems;
 import me.alanelol.pixelsitems.objetos.ItemTest;

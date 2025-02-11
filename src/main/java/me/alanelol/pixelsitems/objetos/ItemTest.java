@@ -1,6 +1,7 @@
 package me.alanelol.pixelsitems.objetos;
 
 import me.alanelol.pixelsitems.PixelsItems;
+import me.alanelol.pixelsitems.effects.TestEffect;
 import me.alanelol.pixelsitems.interfaces.CustomItem;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -15,6 +16,7 @@ import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.util.Vector;
 
 public class ItemTest implements CustomItem {
+    TestEffect TestEffect = new TestEffect();
 
     @Override
     public String GetName() {
@@ -44,7 +46,7 @@ public class ItemTest implements CustomItem {
 
     @Override
     public String GetPermission() {
-        return "pixels.items.itemtest";
+        return "pixelsitems.items.itemtest";
     }
 
     @Override
@@ -62,6 +64,7 @@ public class ItemTest implements CustomItem {
         Target.addPotionEffect(new PotionEffect(PotionEffectType.SLOWNESS, 100, 2, true, true));
         Target.sendMessage("Ⓢ Has sido inflingido con SLOWNESS.");
         Player.sendMessage("Ⓢ Has inflingido a " + Target.getName() + " con SLOWNESS.");
+        TestEffect.DoEffect(Target, Plugin);
     }
 
     @Override
@@ -84,6 +87,7 @@ public class ItemTest implements CustomItem {
         // CUSTOM ACTIONS
         Player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 100, 2, true, true));
         Player.sendMessage("Ⓢ Has hecho click derecho.");
+        TestEffect.DoEffect(Player, Plugin);
     }
 
     @Override
@@ -99,6 +103,7 @@ public class ItemTest implements CustomItem {
         // CUSTOM ACTIONS
         Player.setVelocity(new Vector(0, 5, 0));
         Player.sendMessage("Ⓢ Has cambiado de mano.");
+        TestEffect.DoEffect(Player, Plugin);
     }
 
     @Override
@@ -114,5 +119,6 @@ public class ItemTest implements CustomItem {
         // CUSTOM ACTIONS
         Player.getInventory().addItem(new ItemStack(Material.DIAMOND, 1));
         Player.sendMessage("Ⓢ Has shifteado! toma un diamante.");
+        TestEffect.DoEffect(Player, Plugin);
     }
 }

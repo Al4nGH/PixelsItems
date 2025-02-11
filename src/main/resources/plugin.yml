@@ -1,4 +1,33 @@
 name: PixelsItems
 version: '${project.version}'
 main: me.alanelol.pixelsitems.PixelsItems
+description: Plugin para hacerme la vida mas facil y saltarme 1000 lineas de codigo
 api-version: '1.21'
+authors: [AlanELol, Arriin]
+website: https://github.com/Al4nGH/PixelsItems/tree/master
+load: POSTWORLD
+prefix: PixelsItems
+depend: [ParticleNativeAPI]
+
+permissions:
+
+  pixelsitems:
+    description: "Padre de todos los permisos del plugin."
+    default: true
+    children:
+
+      pixelsitems.items:
+        description: "Padre de todos los permisos de items."
+        default: true
+        children:
+          pixelsitems.items.itemtest:
+            description: "ItemTest"
+            default: true
+
+      pixelsitems.effects:
+        description: "Padre de todos los permisos de efectos visuales."
+        default: true
+        children:
+          pixelsitems.effects.itemtest:
+            description: "ItemTest"
+            default: true
