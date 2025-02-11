@@ -20,7 +20,7 @@ public final class PixelsItems extends JavaPlugin {
         getServer().getLogger().info("-----------------------");
         getServer().getLogger().info("");
         getServer().getLogger().info("");
-        getServer().getLogger().info("PIXELSITEMS INICIADO LOL XD");
+        getServer().getLogger().info("PIXELSITEMS INICIADO XD");
         getServer().getLogger().info("");
         getServer().getLogger().info("");
         getServer().getLogger().info("-----------------------");
