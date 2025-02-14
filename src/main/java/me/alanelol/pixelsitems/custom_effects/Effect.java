@@ -1,4 +1,4 @@
-package me.alanelol.pixelsitems.interfaces;
+package me.alanelol.pixelsitems.custom_effects;
 
 import me.alanelol.pixelsitems.PixelsItems;
 import org.bukkit.Location;

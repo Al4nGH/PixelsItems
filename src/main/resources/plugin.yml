@@ -23,6 +23,9 @@ permissions:
           pixelsitems.items.itemtest:
             description: "ItemTest"
             default: true
+          pixelsitems.items.arcoregenerador:
+            description: "Arco Regenerador"
+            default: true
 
       pixelsitems.effects:
         description: "Padre de todos los permisos de efectos visuales."

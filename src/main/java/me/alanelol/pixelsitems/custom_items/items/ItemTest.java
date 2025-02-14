@@ -1,8 +1,9 @@
-package me.alanelol.pixelsitems.objetos;
+package me.alanelol.pixelsitems.custom_items.items;
 
 import me.alanelol.pixelsitems.PixelsItems;
-import me.alanelol.pixelsitems.effects.TestEffect;
-import me.alanelol.pixelsitems.interfaces.CustomItem;
+import me.alanelol.pixelsitems.custom_items.CustomItem;
+import me.alanelol.pixelsitems.custom_effects.effects.TestEffect;
+import net.kyori.adventure.text.minimessage.MiniMessage;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
@@ -10,6 +11,7 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerSwapHandItemsEvent;
 import org.bukkit.event.player.PlayerToggleSneakEvent;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.bukkit.scheduler.BukkitRunnable;
@@ -21,6 +23,16 @@ public class ItemTest implements CustomItem {
     @Override
     public String GetName() {
         return "itemtest";
+    }
+
+    @Override
+    public ItemStack GetItemStack() {
+        ItemStack ItemStack = new ItemStack(Material.NETHERITE_SWORD);
+        ItemMeta ItemMeta = ItemStack.getItemMeta();
+        ItemMeta.displayName(MiniMessage.miniMessage().deserialize("itemtest"));
+
+        ItemStack.setItemMeta(ItemMeta);
+        return ItemStack;
     }
 
     @Override

@@ -1,16 +1,22 @@
-package me.alanelol.pixelsitems.interfaces;
+package me.alanelol.pixelsitems.custom_items;
 
+import com.destroystokyo.paper.event.player.PlayerLaunchProjectileEvent;
 import me.alanelol.pixelsitems.PixelsItems;
-import net.kyori.adventure.text.Component;
 import org.bukkit.entity.Player;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
+import org.bukkit.event.entity.ProjectileHitEvent;
+import org.bukkit.event.entity.ProjectileLaunchEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerSwapHandItemsEvent;
 import org.bukkit.event.player.PlayerToggleSneakEvent;
+import org.bukkit.inventory.ItemStack;
 
 public interface CustomItem {
     // Nombre del del item
     String GetName();
+
+    // El item en si
+    ItemStack GetItemStack();
 
     // Cantidad requerida
     int GetQuantityRequired();
@@ -35,4 +41,7 @@ public interface CustomItem {
 
     // Al agacharse
     default void DoCrouchAction(PlayerToggleSneakEvent Event, PixelsItems Plugin) {};
+
+    // Al DISPARAR el projectil (no golpear)
+    default void DoProjectileLaunchAction(PlayerLaunchProjectileEvent Event, PixelsItems Plugin) {}
 }
